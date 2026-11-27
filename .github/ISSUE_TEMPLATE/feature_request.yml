@@ -1,0 +1,54 @@
+name: Feature request
+description: Suggest an improvement or a new capability for Space.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues are public and indexed by search engines. Do not paste document
+        contents, file paths, account names, or tokens. For private material,
+        use email instead: https://spacetext.app/support/
+  - type: input
+    id: space_version
+    attributes:
+      label: Space version
+      description: "Shown in Space > About Space, for example 1.0.0."
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Build
+      description: "The build number shown beside the version in About Space."
+    validations:
+      required: true
+  - type: input
+    id: channel
+    attributes:
+      label: Distribution channel
+      description: "Direct or Mac App Store."
+    validations:
+      required: true
+  - type: input
+    id: macos_version
+    attributes:
+      label: macOS version
+      description: "From the Apple menu > About This Mac, for example 15.3.1."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like Space to do?
+      description: "What you tried, what you expected, and why the current behavior does not cover it."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and found no request for the same change.
+          required: true
+        - label: This request contains no document contents, file paths, or account credentials.
+          required: true
