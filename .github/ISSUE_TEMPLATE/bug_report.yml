@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a problem with Space that you can reproduce.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues are public and indexed by search engines. Do not paste document
+        contents, file paths, account names, or tokens. For private material,
+        use email instead: https://spacetext.app/support/
+  - type: input
+    id: space_version
+    attributes:
+      label: Space version
+      description: "Shown in Space > About Space, for example 1.0.0."
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Build
+      description: "The build number shown beside the version in About Space."
+    validations:
+      required: true
+  - type: input
+    id: channel
+    attributes:
+      label: Distribution channel
+      description: "Direct or Mac App Store."
+    validations:
+      required: true
+  - type: input
+    id: macos_version
+    attributes:
+      label: macOS version
+      description: "From the Apple menu > About This Mac, for example 15.3.1."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: "File type, what you did, what happened, and what you expected. Steps to reproduce help most."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and found no report of the same problem.
+          required: true
+        - label: This report contains no document contents, file paths, or account credentials.
+          required: true
